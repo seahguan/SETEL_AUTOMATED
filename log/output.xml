@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20231231 19:09:24.139" rpa="false" schemaversion="4">
+<suite id="s1" name="LSG TEST" source="C:\Users\ASUS\PycharmProjects\SETEL_AUTOMATED\Tests\LSG_TEST.robot">
+<test id="s1-t1" name="Example Test" line="99">
+<kw name="Set Variable" library="BuiltIn">
+<var>${name}</var>
+<arg>John</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231231 19:09:24.168" level="INFO">${name} = John</msg>
+<status status="PASS" starttime="20231231 19:09:24.168" endtime="20231231 19:09:24.170"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${modified_greeting}</var>
+<arg>${greeting}</arg>
+<arg>${name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231231 19:09:24.171" level="INFO">${modified_greeting} = ['Hello, %s!', 'John']</msg>
+<status status="PASS" starttime="20231231 19:09:24.171" endtime="20231231 19:09:24.172"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Original Greeting: ${greeting}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231231 19:09:24.172" level="INFO">Original Greeting: Hello, %s!</msg>
+<status status="PASS" starttime="20231231 19:09:24.172" endtime="20231231 19:09:24.172"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Modified Greeting: ${modified_greeting}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231231 19:09:24.173" level="INFO">Modified Greeting: ['Hello, %s!', 'John']</msg>
+<status status="PASS" starttime="20231231 19:09:24.172" endtime="20231231 19:09:24.173"/>
+</kw>
+<status status="PASS" starttime="20231231 19:09:24.167" endtime="20231231 19:09:24.173"/>
+</test>
+<status status="PASS" starttime="20231231 19:09:24.141" endtime="20231231 19:09:24.173"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LSG TEST">LSG TEST</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

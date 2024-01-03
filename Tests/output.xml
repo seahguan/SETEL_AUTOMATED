@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20240101 00:45:18.861" rpa="false" schemaversion="4">
+<suite id="s1" name="LSG TEST" source="C:\Users\ASUS\PycharmProjects\SETEL_AUTOMATED\tests\LSG_TEST.robot">
+<test id="s1-t1" name="Example Test" line="100">
+<kw name="Set Variable" library="BuiltIn">
+<var>${name}</var>
+<arg>John</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240101 00:45:18.886" level="INFO">${name} = John</msg>
+<status status="PASS" starttime="20240101 00:45:18.886" endtime="20240101 00:45:18.886"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${modified_greeting}</var>
+<arg>"${greeting}" % "${name}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240101 00:45:18.887" level="INFO">${modified_greeting} = Hello, John! How are you</msg>
+<status status="PASS" starttime="20240101 00:45:18.887" endtime="20240101 00:45:18.887"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Original Greeting: ${greeting}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240101 00:45:18.888" level="INFO">Original Greeting: Hello, %s! How are you</msg>
+<status status="PASS" starttime="20240101 00:45:18.887" endtime="20240101 00:45:18.888"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Modified Greeting: ${modified_greeting}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240101 00:45:18.888" level="INFO">Modified Greeting: Hello, John! How are you</msg>
+<status status="PASS" starttime="20240101 00:45:18.888" endtime="20240101 00:45:18.888"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${label}</var>
+<arg>Parking status</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240101 00:45:18.888" level="INFO">${label} = Parking status</msg>
+<status status="PASS" starttime="20240101 00:45:18.888" endtime="20240101 00:45:18.888"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${options_sel}</var>
+<arg>Maintenance</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240101 00:45:18.889" level="INFO">${options_sel} = Maintenance</msg>
+<status status="PASS" starttime="20240101 00:45:18.889" endtime="20240101 00:45:18.889"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${modified_locator}</var>
+<arg>"${Options_DDL}" % ("${label}", "${options_sel}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240101 00:45:18.889" level="INFO">${modified_locator} = //label[text()=Parking status]/parent::div/descendant::div/div[text()=Maintenance]</msg>
+<status status="PASS" starttime="20240101 00:45:18.889" endtime="20240101 00:45:18.889"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Original locator addr: ${Options_DDL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240101 00:45:18.890" level="INFO">Original locator addr: //label[text()=%s]/parent::div/descendant::div/div[text()=%s]</msg>
+<status status="PASS" starttime="20240101 00:45:18.889" endtime="20240101 00:45:18.890"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Modified locator addr: ${modified_locator}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240101 00:45:18.890" level="INFO">Modified locator addr: //label[text()=Parking status]/parent::div/descendant::div/div[text()=Maintenance]</msg>
+<status status="PASS" starttime="20240101 00:45:18.890" endtime="20240101 00:45:18.890"/>
+</kw>
+<status status="PASS" starttime="20240101 00:45:18.886" endtime="20240101 00:45:18.890"/>
+</test>
+<status status="PASS" starttime="20240101 00:45:18.863" endtime="20240101 00:45:18.891"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LSG TEST">LSG TEST</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
